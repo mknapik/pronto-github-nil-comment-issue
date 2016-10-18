@@ -2,6 +2,7 @@
 # Docs
 class Fibonacci
   def self.call(n)
+    key     = nil
     Hash.new { |hash, key| hash[key] = hash[key - 2] + hash[key - 1] }
         .tap { |hash| hash[0] = hash[1] = 1 }[n]
   end
