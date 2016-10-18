@@ -3,7 +3,7 @@
 begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
-rescue LoadError # rubocop:disable Lint/HandleExceptions
+rescue LoadError
 end
 
 begin
@@ -11,7 +11,7 @@ begin
   RuboCop::RakeTask.new(:rubocop) do |task|
     task.fail_on_error = false
   end
-rescue LoadError # rubocop:disable Lint/HandleExceptions
+rescue LoadError
 end
 
 task default: [:spec, :rubocop]
